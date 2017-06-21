@@ -4,10 +4,9 @@
  * ------------------------------------- */
 
 .homeicon {
-  border-radius: 20px;
-  border: solid 1px gray;
+  border-radius: 100px;
+  border: solid 1px $red;
   width : 150px;
-  height: 90px;
 }
 
 .homebox {
@@ -24,6 +23,6 @@
   }
   p {
     font-size : 15px;
-    font-weight: 200px;
+    font-weight: 100px;
   }
 }
