@@ -8,10 +8,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel='shortcut icon' type='image/x-icon' href='http://res.cloudinary.com/dkunigdwx/image/upload/v1498039053/pde/pdelogo.png' />
 
   </head>
 
   <body>
+    <%= render "shared/navbar" %>
     <%= yield %>
   </body>
 </html>

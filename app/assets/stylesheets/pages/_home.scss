@@ -2,3 +2,28 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+
+.homeicon {
+  border-radius: 20px;
+  border: solid 1px gray;
+  width : 150px;
+  height: 90px;
+}
+
+.homebox {
+  padding: 30px;
+  // margin-top: 20px;
+  // border: solid 1px gray;
+  // border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  color: white;
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  p {
+    font-size : 15px;
+    font-weight: 200px;
+  }
+}

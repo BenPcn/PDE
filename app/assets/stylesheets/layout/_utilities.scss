@@ -23,3 +23,13 @@
 .bg-dark-blue {
   background: #3b5998;
 }
+
+.wrapper {
+  &-gray {
+    background: #F1F1F1;
+  }
+  &-red {
+    background: #922620;
+  }
+}
+

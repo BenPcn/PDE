@@ -1,7 +1,7 @@
 /* Main class */
 .navbar-wagon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
+  background: #F1F1F1;
   transition: all 0.3s ease;
   display: flex;
   height: 70px;
@@ -62,12 +62,12 @@
 .navbar-wagon-button:hover {
   color: white;
   background: #D23333;
-  border-color: #ac2626;
+  border-color: $red;
 }
 
 /* Navbar search form */
 .navbar-wagon-search {
-  flex: 0 1 300px;
+  flex: 0 1 400px;
   display: flex;
   justify-content: flex-end;
   padding: 0 10px;
@@ -94,6 +94,10 @@
   padding: 0 10px;
   font-size: 14px;
   outline: none;
+  &:hover {
+    border-bottom: 3px solid $red;
+    width: 10%;
+  }
 }
 .navbar-wagon-search-input:focus  {
   border: 1px solid #CCCCCC;
@@ -104,6 +108,7 @@
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
   border-color: #E6E6E6;
+  width: 17px;
 }
 .navbar-wagon-dropdown-menu li > a {
   transition: color 0.3s ease;
@@ -113,6 +118,7 @@
   line-height: 22px !important;
   padding: 10px 20px;
 }
+
 .navbar-wagon-dropdown-menu li > a:hover {
   background: transparent !important;
   color: black !important;
@@ -128,4 +134,46 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.caret {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color:  #922620 transparent transparent transparent;
+  font-weight: 400;
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  margin-left: 130px;
+}
+
+#mouvement {
+  margin-top: 5px;
+  border-color:  #922620;
+  border-top: 4px solid  #922620;
+  left: 17px;
+}
+#caretplace {
+  .caret {
+    margin-left: 85px;
+  }
+}
+
+#drop {
+  padding-left: 0px;
+  font-weight: 300;
+}
+
+.btn-pilotes {
+  background-color: $red;
+  border: none;
+}
+
+.hovereffect {
+  &:hover {
+    border-bottom: 3px solid $red;
+    width: 10%;
+  }
 }
