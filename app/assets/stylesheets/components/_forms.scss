@@ -1,0 +1,19 @@
+#sign-form {
+  width: 400px;
+}
+
+.form-button {
+  background: #922620;  /* fallback for old browsers */
+  color: white;
+  opacity: 0.95;
+  padding: 5px;
+  border-radius: 3px;
+  padding-left: 18px;
+  padding-right: 18px;
+  &:hover {
+    text-decoration: none;
+    background: #FFC371;
+    color: white;
+    transform: scale(1.2);
+  }
+}

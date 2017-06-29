@@ -1,0 +1,19 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://res.cloudinary.com/dkunigdwx/image/upload/v1498038807/pde/home.jpg');">
+  <div class="banner-content" id="sign-form">
+      <%= image_tag "http://res.cloudinary.com/dkunigdwx/image/upload/v1498039053/pde/pdelogo.png", width: "150px" %>
+    <h2>Se connecter</h2>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-inputs">
+      <%= f.input :email, required: false, autofocus: true %>
+      <%= f.input :password, required: false %>
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    </div>
+
+    <div class="form-actions btn">
+      <%= f.button :submit, "Gaz !" , class: "form-button"%>
+    </div>
+    <% end %>
+    <br>
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
