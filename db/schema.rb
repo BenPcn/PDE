@@ -10,10 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170629131655) do
+ActiveRecord::Schema.define(version: 20170629170759) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "machines", force: :cascade do |t|
+    t.integer  "pilot_id"
+    t.string   "name"
+    t.string   "brand"
+    t.string   "power"
+    t.string   "age"
+    t.string   "short_desc"
+    t.string   "full_desc"
+    t.string   "picture_off_url"
+    t.string   "picture_2_url"
+    t.string   "picture_3_url"
+    t.string   "picture_4_url"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["pilot_id"], name: "index_machines_on_pilot_id", using: :btree
+  end
+
+  create_table "pilots", force: :cascade do |t|
+    t.string   "name"
+    t.string   "function"
+    t.string   "position"
+    t.integer  "experience"
+    t.string   "short_desc"
+    t.string   "full_desc"
+    t.string   "picture_off_url"
+    t.string   "picture_2_url"
+    t.string   "picture_3_url"
+    t.string   "picture_4_url"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "pilot_id"
+    t.string   "content"
+    t.integer  "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pilot_id"], name: "index_reviews_on_pilot_id", using: :btree
+    t.index ["user_id"], name: "index_reviews_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -28,8 +71,12 @@ ActiveRecord::Schema.define(version: 20170629131655) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "picture"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "machines", "pilots"
+  add_foreign_key "reviews", "pilots"
+  add_foreign_key "reviews", "users"
 end
