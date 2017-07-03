@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170629170759) do
+ActiveRecord::Schema.define(version: 20170703110818) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,15 +20,14 @@ ActiveRecord::Schema.define(version: 20170629170759) do
     t.string   "name"
     t.string   "brand"
     t.string   "power"
-    t.string   "age"
     t.string   "short_desc"
     t.string   "full_desc"
-    t.string   "picture_off_url"
-    t.string   "picture_2_url"
-    t.string   "picture_3_url"
-    t.string   "picture_4_url"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "picture_1"
+    t.string   "picture_2"
+    t.string   "picture_3"
+    t.string   "picture_4"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["pilot_id"], name: "index_machines_on_pilot_id", using: :btree
   end
 
@@ -39,19 +38,19 @@ ActiveRecord::Schema.define(version: 20170629170759) do
     t.integer  "experience"
     t.string   "short_desc"
     t.string   "full_desc"
-    t.string   "picture_off_url"
-    t.string   "picture_2_url"
-    t.string   "picture_3_url"
-    t.string   "picture_4_url"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "picture_1"
+    t.string   "picture_2"
+    t.string   "picture_3"
+    t.string   "picture_4"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "pilot_id"
     t.string   "content"
     t.integer  "rating"
+    t.integer  "pilot_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["pilot_id"], name: "index_reviews_on_pilot_id", using: :btree

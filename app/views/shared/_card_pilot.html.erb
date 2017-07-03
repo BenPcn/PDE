@@ -1,9 +1,16 @@
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://res.cloudinary.com/dkunigdwx/image/upload/v1498062409/pde/buterus.jpg');">
-  <div class="card-category">Manager</div>
-  <div class="card-description">
-    <h2>Butérus</h2>
-    <p>Directeur Tatouages, Piercings et RH</p>
+<div class="col-xs-12 col-sm-4">
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://res.cloudinary.com/dkunigdwx/image/upload/v1498062409/pde/buterus.jpg');">
+    <div class="mouse">
+      <p><%= pilot.short_desc %></p>
+      <i class="fa fa-play-circle" aria-hidden="true" style='font-size: 20px'></i>
+      <b>Découvrir <%= pilot.name %></b>
+    </div>
+    <div class="card-category"><%= pilot.position %></div>
+    <div class="card-description">
+      <h2><%= pilot.name %></h2>
+      <p><%= pilot.function %></p>
+    </div>
+    <img class="card-user avatar" src="http://res.cloudinary.com/dkunigdwx/image/upload/v1498062409/pde/buterus.jpg">
+    <!-- <a class="card-link" href=<%= pilot_path(pilot)%> ></a> -->
   </div>
-  <img class="card-user avatar" src="user.jpg">
-  <a class="card-link" href="#" ></a>
 </div>
