@@ -5,13 +5,12 @@ class CreateMachines < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :brand
       t.string :power
-      t.string :age
       t.string :short_desc
       t.string :full_desc
-      t.string :picture_off_url
-      t.string :picture_2_url
-      t.string :picture_3_url
-      t.string :picture_4_url
+      t.string :picture_1
+      t.string :picture_2
+      t.string :picture_3
+      t.string :picture_4
 
       t.timestamps
     end
