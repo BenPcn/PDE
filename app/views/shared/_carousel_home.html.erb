@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="head-title-box">
+    <h2>Nos Pilotes sont les meilleurs</h2>
+    <div class="highlight"></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="carousel slide multi-item-carousel" id="theCarousel">
+        <div class="carousel-inner">
+          <% @pilots.each_with_index do |pilot, i| %>
+            <div class="item <%= i.zero? ? 'active' : '' %>">
+              <div class="col-sm-4"><%= render 'shared/card_pilot', pilot: pilot %></div>
+            </div>
+          <% end %>
+        </div>
+        <a class="left carousel-control left-control-override" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left left-control-override" id="chechevron"></i></a>
+        <a class="right carousel-control right-control-override" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right" id="chechevron"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
